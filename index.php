@@ -1,13 +1,14 @@
 <?php
 
 $today = getdate();
-
+$last = 0;
 $day = $today['mday'];
 $month = $today['mon'];
 $year = $today['year'];
 
 $h2 = 'Fishnet Chair';
 $title = 'Interior';
+$arr = ['test','test2', 'test3', 'test4'];
 
 $a = 11;
 $b = 232;
@@ -20,6 +21,25 @@ echo "a = ";
 echo $a;
 echo " b = ";
 echo $b;
+
+function array_swap(array &$arr, $number)
+{
+
+	if($number == 0 OR $number == $last){
+		end($arr);
+		$last = key($arr);
+		list($arr[$number], $arr[$last]) = array($arr[$last], $arr[$number]);
+		return true;
+	}
+	if(isset($arr[$number])){
+		list($arr[$number], $arr[0]) = array($arr[$last], $arr[0]);
+		return true;
+	}
+	return false;
+}
+
+array_swap($arr, 1);
+print_r($arr);
 ?>
 
 <!DOCTYPE html>
