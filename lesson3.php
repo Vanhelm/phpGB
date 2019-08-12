@@ -80,3 +80,7 @@ function print_city_k ($city){
 }
 
 print_r(print_city_k($shtat));
+
+for ($i=0; $i < 10; print_r($i), $i++) { 
+	# code...
+}
