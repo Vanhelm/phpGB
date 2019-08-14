@@ -17,7 +17,7 @@
     <ul class="navbar-nav mr-auto">
       <?php foreach ($menu as $val) : ?>
       <li class="nav-item active">
-        <a class="nav-link" href="#"><?=$val?></a>
+        <a class="nav-link" href="/"><?=$val?></a>
       </li>
       <?php endforeach?>
       <li class="nav-item dropdown">
@@ -31,9 +31,9 @@
       </li>
 
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    <form class="form-inline my-2 my-lg-0" enctype="multipart/form-data" method="post" action="/index.php">
+      <input class="form-control mr-sm-2" type="file" placeholder="Загрузить картинку" name="file">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Загрузить картинку</button>
     </form>
   </div>
 </nav>
